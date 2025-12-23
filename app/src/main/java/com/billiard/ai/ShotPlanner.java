@@ -4,13 +4,12 @@ import java.util.List;
 
 public class ShotPlanner {
     public static class TableState {
-        public List<PhysicsEngine.Vec2> balls;
-        public ShotPlanner.TableState(List<PhysicsEngine.Vec2> b){ balls = b;}
+        public List<VisionProcessor.Ball> balls;
+        public TableState(List<VisionProcessor.Ball> b){ balls = b; }
     }
 
-    // تحويل الحالة إلى JSON لإرسالها الى AIServerClient.askOpenRouter(...)
     public static String stateToJson(TableState s){
-        // TODO: serialise to JSON (يمكن استخدام org.json أو gson لاحقًا)
+        // TODO: تحويل الحالة إلى JSON لإرسالها لـ AIServerClient
         return "{}";
     }
 }
